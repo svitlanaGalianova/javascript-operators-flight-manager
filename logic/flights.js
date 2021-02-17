@@ -1,3 +1,5 @@
+"use strict"
+
 function Flights() {
     function calculateNumberOfFlights(numOfPassengers, flightCapacity) {
         if (!Number.isInteger(numOfPassengers) || numOfPassengers < 0)
@@ -11,13 +13,13 @@ function Flights() {
             ? numOfPassengers / flightCapacity : (numOfPassengers - numOfPassengers % flightCapacity) / flightCapacity + 1
     }
     function checkAircraftRevision(distanceLimit, distancesArray) {
-        totalDistance = 0
+        var totalDistance = 0
 
         distancesArray.forEach(distance => {
             totalDistance += distance
         })
 
-        message = (totalDistance <= distanceLimit / 2) ?
+        var message = (totalDistance <= distanceLimit / 2) ?
             "The revision needs to be done within the next 3 months" :
             (totalDistance > distanceLimit / 2 & totalDistance <= (distanceLimit / 3) * 2) ?
                 "The revision needs to be done within the next 2 months" :

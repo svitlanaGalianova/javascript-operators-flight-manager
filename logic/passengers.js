@@ -1,6 +1,8 @@
+"use strict"
+
 function Passengers() {
     function checkFlightCapacity(flightCapacity, passengerNumbersArray) {
-        totalNumberOfPassengers = 0;
+        var totalNumberOfPassengers = 0
 
         passengerNumbersArray.forEach(number => {
             totalNumberOfPassengers += number
@@ -14,7 +16,7 @@ function Passengers() {
 
     function distributeAllSeatsToAllPassengers(numOfVip, numOfPassengers, numOfFlights,
         numOfBusinessSeats, numOfEconomySeats) {
-        distribution = {
+        var distribution = {
             vipPassengersWithEconomySeats: 0,
             regularPassengersWithBusinessSeats: 0
         }
